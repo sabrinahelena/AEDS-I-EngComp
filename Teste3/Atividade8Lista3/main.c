@@ -3,13 +3,15 @@
 
 int main()
 {
-    int x=1, soma;
-    float resultado;
-    while(x<=49){
-        soma+= x;
-        x++;
-    }
-    printf("A soma de 1 ate 49 e': %d ", soma);
-    return 0;
+     int x = 1;
+    float soma = 0;
 
+  while (x <= 10)
+    {
+        soma += (1 / x);
+         x++;
+        
+    }
+
+     printf("O resultado e': %.2f", soma);
 }

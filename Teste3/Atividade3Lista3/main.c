@@ -3,18 +3,17 @@
 
 int main()
 {
-    int x=0, numero;
-    while(x<5){
-        printf("\nDigite um numero para testar se e' divisivel por 3 ou nao: ");
-        scanf("%d", &numero);
+    int x =1, y = 1;
+    float soma = 0;
+    //X vai ser meu numerador e y meu denominador
+    while(x <= 99 || y <= 50)
+    {
+        soma += ((x/y));
+        x = x + 2;
+        y++;
 
-        if(numero%3 == 0){
-            printf("\nNumero divisivel por 3.");
-        }
-        else{
-            printf("\nNumero nao divisivel por 3.\n");
-        }
-        x++;
     }
+
+    printf("O resultado e': %.2f", soma);
     return 0;
 }
