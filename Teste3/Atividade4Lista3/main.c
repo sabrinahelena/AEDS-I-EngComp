@@ -3,7 +3,7 @@
 
 int main()
 {
-    int x = 1;
+    float x = 1;
     float soma=0;
     do{
         soma += (1 / x);

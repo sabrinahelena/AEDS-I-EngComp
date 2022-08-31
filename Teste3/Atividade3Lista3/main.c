@@ -3,7 +3,7 @@
 
 int main()
 {
-    int x =1, y = 1;
+    float x =1, y = 1;
     float soma = 0;
     //X vai ser meu numerador e y meu denominador
     while(x <= 99 || y <= 50)
