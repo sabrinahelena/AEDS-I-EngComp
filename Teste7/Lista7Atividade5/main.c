@@ -3,16 +3,14 @@
 
 void somarPares()
 {
-    int numero, somaPar = 0, x, i;
+    int numero, somaPar = 0;
 
     printf("\nDigite o numero: \nNUMERO: ");
     scanf("%d", &numero);
 
-    while(x <= numero)
+    for(int i = 2; i <= numero; i = i + 2)
         {
-            i = 2;
             somaPar += i;
-            i = i + 2;
             printf("\n%d", somaPar);
         }
 
