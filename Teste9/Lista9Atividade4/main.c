@@ -3,31 +3,20 @@
 
 
 /* function declaration */
-
-float valorLim();
-float calcularFahrenheit(float, float);
 void inicioPrograma();
+void CalcularFahrenheit(float limIni, float limFi);
 
 void inicioPrograma(){
-    float valorInicial, valorF;
+    float valorInicial, vFinal;
     printf("\nVoce deseja escrever a tabela de graus centigrados em funcao de graus fahrenheit contendo qual valor como inicio? \nValor: ");
     scanf("%f", &valorInicial);
-    valorF = valorLim();
-    calcularFahrenheit(valorInicial, valorF);
-}
-
-float valorLim()
-{
-    float vFinal;
-
     printf("\nE como limite? \nValor: ");
     scanf("%f", &vFinal);
-    return vFinal;
-
-
+    CalcularFahrenheit(valorInicial, vFinal);
 }
 
-void calcularFahrenheit(float limIni, float limFi){
+
+void CalcularFahrenheit(float limIni, float limFi){
     float C;
     for(float i = limIni; i<=limFi; i = i + 2.0){
         C=((5.0/9.0)*(i - 32.0));

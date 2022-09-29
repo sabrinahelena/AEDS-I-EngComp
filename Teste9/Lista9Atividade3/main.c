@@ -2,64 +2,57 @@
 #include <stdlib.h>
 
 
-float opcaoDolar(float valor)
+float opcaoDolar(float valorD);
+float opcaoEuro(float valorE);
+float ConverterDolar(float valorRealD, float cDolar);
+float ConverterEuro(float valorRealE, float cEuro);
+
+float opcaoDolar(float valorD)
 {
-    float cotacaoDolar, convertidoDolar;
+    float cotacaoDolar;
 
     printf("\nDigite a cotacao do dolar para a conversao: \nCOTACAO:");
     scanf("%f", &cotacaoDolar);
-    convertidoDolar = converterDolar(valor, cotacaoDolar);
-    return convertidoDolar;
+    return ConverterDolar(valorD, cotacaoDolar);
 }
 
-float opcaoEuro(float valor)
+float opcaoEuro(float valorE)
 {
-    float cotacaoEuro, convertidoEuro;
+    float cotacaoEuro;
     printf("\nDigite a cotacao do euro para a conversao: \nCOTACAO:");
     scanf("%f", &cotacaoEuro);
-    convertidoEuro = converterEuro(valor, cotacaoEuro);
-    return convertidoEuro;
+    return ConverterEuro(valorE, cotacaoEuro);
 
 }
 
-float converterDolar(float valorReal, float cDolar)
+float ConverterDolar(float valorRealD, float cDolar)
 {
-
-    float convertidoDolar;
-
-    convertidoDolar = valorReal/cDolar;
-    return convertidoDolar;
+    return valorRealD/cDolar;
 
 }
 
-float converterEuro(float valorReal, float cEuro)
+float ConverterEuro(float valorRealE, float cEuro)
 {
-    float convertidoEuro;
-    convertidoEuro = valorReal/cEuro;
-    return convertidoEuro;
+    return valorRealE/cEuro;
 }
-
-
-
-
 
 int main()
 {
-    float valor, opcao, resultDolar, resultEuro;
-    for(int i = 1; i<=2; i++ )
+    float valorProduto, opcao;
+    for(int i = 1; i<=5; i++ )
     {
         printf("\nQual o valor do %d produto? \n", i);
-        scanf("%f", &valor);
+        scanf("%f", &valorProduto);
         printf("\nDeseja converter para \n1 - Dolar \n2 - Euro \nOPCAO: ");
-        scanf("%d", &opcao);
+        scanf("%f", &opcao);
         if(opcao == 1)
         {
-            resultDolar = opcaoDolar(valor);
+            float resultDolar = opcaoDolar(valorProduto);
             printf("\nO valor convertido para dolar e': %.2f", resultDolar);
         }
         else
         {
-            resultEuro = opcaoEuro(valor);
+            float resultEuro = opcaoEuro(valorProduto);
             printf("\nO valor convertido para euro e': %.2f", resultEuro);
         }
 

@@ -14,7 +14,7 @@ int main()
 {
     int genero;
     float somaPesoMulher=0, somaPesoHomem = 0, contMulheres = 0, contHomens = 0, peso;
-    for(int i = 1; i<=10; i++){
+    for(int i = 1; i<=4; i++){
         printf("Digite o seu genero: \n1 - Masculino \n2 - Feminino \n");
         scanf("%d", &genero);
         printf("\nDigite o seu peso: \n");
