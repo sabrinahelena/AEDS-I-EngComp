@@ -5,7 +5,7 @@ int main()
 {
     int respostas[9], genero[9], contSim =0, contNao = 0, contFemSim = 0, contFemNao = 0, contMascSim = 0, contMascNao = 0;
 
-    for(int i = 1; i<=9 ; i++)
+    for(int i = 0; i<9 ; i++) //Leitura de resposta e genero
     {
         printf("Escolha \n1 - Sim \n2 - Nao \nRESPOSTA: ");
         scanf("%d", &respostas[i]);
@@ -14,7 +14,7 @@ int main()
 
     }
 
-    for(int i = 1; i<=9; i++)
+    for(int i = 0; i<9; i++) //For para contar respostas sim e nao
     {
         if(respostas[i] == 1)
         {
@@ -24,45 +24,32 @@ int main()
         {
             contNao++;
         }
-        else if(respostas[i] == 1 && genero == 2)
-        {
-            contFemSim++;
-        }
-        else if(respostas[i] == 1 && genero == 1)
-        {
-            contMascSim++;
-        }
-        else if(respostas[i] == 2 && genero == 2)
-        {
-            contFemNao++;
-        }
-        else if(respostas[i] == 2 && genero == 1)
-        {
-            contMascNao++;
-        }
-
     }
 
-    for(int i = 1; i<=9; i++){
-        if(respostas[i] == 1 && genero == 2)
+    for(int i = 0; i<9; i++) //For para contar voto Sim para mulheres e homens
+    {
+        if(respostas[i] == 1 && genero[i] == 2)
         {
             contFemSim++;
         }
-        else if(respostas[i] == 1 && genero == 1)
+        else if(respostas[i] == 1 && genero[i] == 1)
         {
             contMascSim++;
         }
-        else if(respostas[i] == 2 && genero == 2)
+    }
+    for(int i = 0; i<9; i++) //for para contar voto nao para mulheres e homens
+    {
+        if(respostas[i] == 2 && genero[i] == 2)
         {
             contFemNao++;
         }
-        else if(respostas[i] == 2 && genero == 1)
+        else if(respostas[i] == 2 && genero[i] == 1)
         {
             contMascNao++;
         }
     }
 
-    for(int i = 1; i<=9; i++)
+    for(int i = 0; i<9; i++)//For para imprimir na tela os votos dos homens e mulheres
     {
         if(genero[i] == 1)
         {
@@ -74,7 +61,7 @@ int main()
         }
     }
 
-    for(int i = 1; i<=9; i++)
+    for(int i = 0; i<9; i++)//For para imprimir todos os votos
     {
         printf("\nOs votos foram: %d - posicao [%d] ", respostas[i], i);
     }
