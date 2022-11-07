@@ -30,9 +30,9 @@
 ***
 - ## 4 - Em uma escola, uma matriz de 10 linhas e 3 colunas contém as seguintes informações sobre alunos de uma disciplina, sendo todas as informações do tipo inteiro:
 
-    ## Primeira coluna: média das provas (de 0 a 70)
-    ## Segunda coluna: média dos trabalhos (de 0 a 30)
-    ## Terceira coluna: nota final
+    ### Primeira coluna: média das provas (de 0 a 70)
+    ### Segunda coluna: média dos trabalhos (de 0 a 30)
+    ### Terceira coluna: nota final
     ## Elabore um programa em Java que:
 
     - Leia as duas primeiras informações de cada aluno
