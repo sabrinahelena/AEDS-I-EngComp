@@ -11,35 +11,27 @@ int CalcularFatorial(int numero)
     return fat;
 }
 
-int CalculadorArranjoSimples(int n, int p)
-{
-    int nFatoral, denominador, denominadorFatorado, resultado;
+int CalcularArranjo(int n, int d){
 
+int arranjo;
+arranjo = n/(d);
 
-    nFatoral = CalcularFatorial(n);
-    denominador = n-p;
-    denominadorFatorado = CalcularFatorial(denominador);
-
-    resultado = (nFatoral/denominadorFatorado);
-    return resultado;
+return arranjo;
 
 }
 
-
 int main()
 {
-    int Nx, Px, arranjo, Nfatorado, Pfatorado;
+    int Nx, Px, arranjo, Nfatorado, denominador;
     printf("\nDigite o N para a formula de arranjo simples: \nN:");
     scanf("%d", &Nx);
     printf("\nDigite o P para a formula de arranjo simples: \nP:");
     scanf("%d", &Px);
     Nfatorado = CalcularFatorial(Nx);
-    Pfatorado = CalcularFatorial(Px);
+    denominador = Nx - Px;
+    arranjo = CalcularArranjo(Nfatorado, denominador);
+    printf("\nArranjo: %d", arranjo);
 
-    arranjo = CalculadorArranjoSimples(Nx, Px);
 
-
-    printf("\nN FATORADO: %d\nP FATORADO: %d", Nfatorado, Pfatorado);
-    printf("\nO arranjo e': %d", arranjo );
     return 0;
 }
